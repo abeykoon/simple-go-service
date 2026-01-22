@@ -17,6 +17,8 @@ func main() {
 		fmt.Fprintln(w, "Test endpoint")
 	})
 
-	fmt.Println("Server starting on :9095")
+	fmt.Println("Waiting 10 seconds before starting server...")
+	time.Sleep(10 * time.Second)
+	fmt.Println("Server started on :9095")
 	http.ListenAndServe(":9095", nil)
 }
